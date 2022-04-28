@@ -10,6 +10,7 @@ namespace BanVe.Models
     [Table("TblAdminLogin")]
     public class AdminLogic
     {
+        
         [Key]
         public int AdminId { get; set; }
         [Required(ErrorMessage = "Tên đăng nhập không được trống")]
@@ -20,8 +21,9 @@ namespace BanVe.Models
         [Required(ErrorMessage = "Mật khẩu không được trống")]
         [Display(Name = "Mật khẩu")]
         [DataType(DataType.Password)]
-        [MinLength(5, ErrorMessage = "Trên 5 kí tự"), MaxLength(20, ErrorMessage = "Dưới 20 kí tự")]
+        [MinLength(5, ErrorMessage = "Trên 7 kí tự"), MaxLength(20, ErrorMessage = "Dưới 20 kí tự")]
         public string Password { get; set; }
+        
     }
     [Table("TblUserAccount")]
     public class UserAccount
